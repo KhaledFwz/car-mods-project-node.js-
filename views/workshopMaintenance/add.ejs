@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ربط ورشة بخدمة صيانة</h1>
+
+    <form action="/workshop-maintenance/add" method="post">
+        <label>الورشة:</label>
+        <select name="workshop" required>
+            <% workshops.forEach(w => { %>
+                <option value="<% w._id%>"><%= w.name %></option>
+                <% }) %>
+        </select>
+        <br>
+
+        <label>الخدمة:</label>
+        <select name="service" required>
+            <% services.forEach(s => { %>
+                <option value="<% s._id%>"><%= s.name %></option>
+                <% }) %>
+        </select>
+        <br>
+
+        <button type="submit">اضافة</button>
+    </form>
+</body>
+</html>

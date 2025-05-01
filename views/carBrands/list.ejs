@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة العلامات التجارية</title>
+</head>
+<body>
+    <h1>كل العلامات التجارية</h1>
+    <ul>
+        <% brands.forEach(brand => { %>
+        <li>
+            <strong><%= brand.brand %></strong>
+            <small><%= brand.info %></small>
+        </li>
+        <% }) %>
+    </ul>
+    <a href="/brands/add">اضافة علامة جديدة</a>
+</body>
+</html>

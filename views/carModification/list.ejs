@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>قائمة تعديلات السيارات</h1>
+
+    <table border="1">
+        <tr>
+            <th>الموديل</th>
+            <th>قبل التعديل</th>
+            <th>بعد التعديل</th>
+        </tr>
+        <% modification.forEach(mod => { %>
+            <tr>
+                <td><% mod.model.model %></td>
+                <td><% if (mod.before_iamge) { %>
+                    <img src="/uploads/<%= mod.before_iamge %>" width="100">
+                    <% } else { %> 
+                        لا توجد صورة
+                        <% } %>d
+                </td>
+                <td><% if (mod.after_image) { %>
+                    <img src="/uploads/<%= mod.after_image %>" width="100">
+                    <% } else { %> 
+                        لا توجد صورة
+                        <% } %>d
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+</html>

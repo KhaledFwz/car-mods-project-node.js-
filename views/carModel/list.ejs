@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كل الموديلات</title>
+</head>
+<body>
+    <h1>كل الموديلات</h1>
+    <ul>
+        <% model.forEach(model => { %>
+            <li>
+                <strong><%= model.model %></strong> 
+                - <%= model.brand ? model.brand.brand : 'بدون ماركة' %><br>
+                <small><%= model.info %></small>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

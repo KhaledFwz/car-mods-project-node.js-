@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>قائمة الاجزاء</h1>
+    <table border="1">
+        <tr>
+            <th>التعديل</th>
+            <th>صورة الجزء</th>
+        </tr>
+        <% parts.forEach(part => { %> 
+            <tr>
+                <td><%= part.modification.model.model %></td>
+                <td> <img src="/uploads/<%= part.part_image %>" width="100"></td>
+            </tr>
+            <% } )%>
+    </table>
+</body>
+</html>

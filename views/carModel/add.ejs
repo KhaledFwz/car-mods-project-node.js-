@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اضافة موديل جديد</title>
+</head>
+<body>
+    <h1>اضافة موديل جديد</h1>
+    <form action="/models/add" method="post">
+        <label >الموديل:</label>    
+        <input type="text" name="model" required>
+        <br>
+
+        <label>: معلومات</label>
+        <textarea name="info"></textarea>
+        <br>
+
+
+
+        <label >البراند:</label>    
+        <select name="brand" required> 
+            <% brands.forEach(brand => { %>
+                <option value="<%= brand._id %>"><%= brand.brand %> </option>
+                <% }) %>
+        </select>   
+        <br>
+
+        
+        <button type="submit">اضافة</button>
+    </form>
+</body>
+</html>

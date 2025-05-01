@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ربط ورشة بخدمة تعديل</h1>
+
+    <form action="/workshop-modifications/add" method="post">
+        <label> اختر الورشة:</label>
+        <select name="workshop" required>
+            <% workshops.forEach(workshop => { %>
+                <option value="<%= workshop._id %>"><%= workshop.name %></option>
+                <% }) %>
+        </select>
+        <br>
+        <label>اختر خدمة تعديل:</label>
+        <select name="modificationService" required>
+            <% services.forEach(service => { %>
+                <option value="<%= service._id %>"><%= service.name %></option>
+                <% }) %>
+        </select>
+        <br>
+        <button type="submit">ربط</button>
+    </form>
+</body>
+</html>
