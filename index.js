@@ -19,7 +19,7 @@ app.use(fileUpload())
 
 
 // connect to database
-mongoose.connect('mongodb://127.0.0.1:27017/car-mods')
+mongoose.connect(process.env.MONGODB_URI)
 .then(()=> console.log("✅ Connected to MongoDB"))
 .catch((err) => console.log("❌ DB connection error:", err));
 
