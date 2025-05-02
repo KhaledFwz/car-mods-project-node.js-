@@ -27,9 +27,9 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-app.use('/', (req,res) => {
-    res.send("API is working")
-})
+// app.use('/', (req,res) => {
+//     res.send("API is working")
+// })
 
 // routes
 const CarBrandRoutes = require("./routes/CarBrandRoutes")
