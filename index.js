@@ -27,9 +27,9 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-app.use('/', (req,res) => {
-    res.send("<h1> ssss </h1>")
-})
+// app.use('/', (req,res) => {
+//     res.send("<h1> ssss </h1>")
+// })
 
 // routes
 const CarBrandRoutes = require("./routes/CarBrandRoutes")
