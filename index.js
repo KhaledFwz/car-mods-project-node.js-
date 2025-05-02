@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 app.use('/', (req,res) => {
-    res.render("home")
+    res.send("<h1> ssss </h1>")
 })
 
 // routes
