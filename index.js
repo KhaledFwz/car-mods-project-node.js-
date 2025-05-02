@@ -1,3 +1,4 @@
+require('dotenv').config();
 const exp = require("constants")
 const express = require("express")
 const mongoose = require("mongoose")
