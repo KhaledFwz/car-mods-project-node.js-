@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
+    <div class="container">
     <h1>اضافة علامة تجارية</h1>
-    <form action="/brands/add" method="post">
+    <form action="/brands/add" method="post" >
         <label> العلامة التجارية</label>
-        <input type="text" name="brand" required>
+        <input type="text" name="brand" required placeholder="اسم العلامة">
         <br>
+
+
         <label>معلومات: </label>
         <textarea name="info"></textarea>
         <br>
+        
         <button type="submit">اضافة</button>
     </form>
     <a href="/brands">عرض كل العلامات</a>
+</div>
 </body>
 </html>
